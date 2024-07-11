@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<resource _id="1">
+	<attributes>
+		<attribute name="Next Node ID" type="Int" value="48" />
+		<attribute name="Next Component ID" type="Int" value="277" />
+	</attributes>
+	<components>
+		<component _id="1" _typeName="Octree" />
+		<component _id="2" _typeName="RenderPipeline">
+			<attributes>
+				<attribute name="Color Space" type="String" value="HDR Linear" />
+				<attribute name="PCF Kernel Size" type="Int" value="5" />
+				<attribute name="Post Process Antialiasing" type="String" value="FXAA3" />
+			</attributes>
+		</component>
+		<component _id="11" _typeName="ReflectionProbeManager" />
+		<component _id="21" _typeName="PhysicsWorld" />
+	</components>
+	<nodes>
+		<node _id="2">
+			<attributes>
+				<attribute name="Name" type="String" value="Skybox" />
+				<attribute name="Rotation" type="Quaternion" value="-0.017452 0.999848 -4.44676e-08 -4.44676e-08" />
+			</attributes>
+			<components>
+				<component _id="3" _typeName="Skybox">
+					<attributes>
+						<attribute name="Model" type="ResourceRef" value="Model;Models/Box.mdl" />
+						<attribute name="Material" type="ResourceRefList" value="Material;Materials/DefaultSkybox.xml" />
+					</attributes>
+				</component>
+			</components>
+		</node>
+		<node _id="3">
+			<attributes>
+				<attribute name="Name" type="String" value="Global Zone" />
+			</attributes>
+			<components>
+				<component _id="4" _typeName="Zone">
+					<attributes>
+						<attribute name="Bounding Box Min" type="Vector3" value="-1000 -1000 -1000" />
+						<attribute name="Bounding Box Max" type="Vector3" value="1000 1000 1000" />
+						<attribute name="Ambient Color" type="Color" value="0 0 0 1" />
+						<attribute name="Background Brightness" type="Float" value="0.500000" />
+						<attribute name="Zone Texture" type="ResourceRef" value="TextureCube;Textures/DefaultSkybox.xml" />
+					</attributes>
+				</component>
+			</components>
+		</node>
+		<node _id="4">
+			<attributes>
+				<attribute name="Name" type="String" value="Global Light" />
+				<attribute name="Rotation" type="Quaternion" value="0.888074 0.325058 0.325058 -0" />
+			</attributes>
+			<components>
+				<component _id="5" _typeName="Light">
+					<attributes>
+						<attribute name="Light Type" type="String" value="Directional" />
+						<attribute name="Brightness Multiplier" type="Float" value="0.500000" />
+						<attribute name="Cast Shadows" type="Bool" value="true" />
+					</attributes>
+				</component>
+			</components>
+		</node>
+		<node _id="7">
+			<attributes>
+				<attribute name="Name" type="String" value="Blue_ship" />
+				<attribute name="Position" type="Vector3" value="-0.082644 0 -1" />
+			</attributes>
+			<components>
+				<component _id="12" _typeName="PrefabReference">
+					<attributes>
+						<attribute name="Prefab" type="ResourceRef" value="PrefabResource;GameModels/Blue_ship.glb/Prefab.prefab" />
+					</attributes>
+				</component>
+				<component _id="26" _typeName="BlueShip" />
+				<component _id="48" _typeName="CollisionShape" />
+				<component _id="49" _typeName="RigidBody">
+					<attributes>
+						<attribute name="Physics Position" type="Vector3" value="-0.082644 0 -1" />
+						<attribute name="Collision Mask" type="Int" value="-2" />
+						<attribute name="Use Gravity" type="Bool" value="false" />
+						<attribute name="Is Trigger" type="Bool" value="true" />
+					</attributes>
+				</component>
+			</components>
+		</node>
+		<node _id="11">
+			<attributes>
+				<attribute name="Name" type="String" value="CameraNode" />
+				<attribute name="Position" type="Vector3" value="0 8 -3.085348" />
+				<attribute name="Rotation" type="Quaternion" value="0.866025 0.5 0 0" />
+			</attributes>
+			<components>
+				<component _id="19" _typeName="Camera" />
+			</components>
+		</node>
+		<node _id="14">
+			<attributes>
+				<attribute name="Name" type="String" value="Spawner" />
+				<attribute name="Position" type="Vector3" value="0 0 10.768373" />
+				<attribute name="Rotation" type="Quaternion" value="-4.37114e-08 0 1 -0" />
+			</attributes>
+			<components>
+				<component _id="76" _typeName="StaticModel">
+					<attributes>
+						<attribute name="Model" type="ResourceRef" value="Model;Models/Box.mdl" />
+						<attribute name="Material" type="ResourceRefList" value="Material;Materials/DefaultRed.xml" />
+					</attributes>
+				</component>
+				<component _id="182" _typeName="EnemySpawner" />
+			</components>
+		</node>
+		<node _id="41">
+			<attributes>
+				<attribute name="Name" type="String" value="RedShip1" />
+				<attribute name="Position" type="Vector3" value="-0.252001 0 8.827373" />
+				<attribute name="Rotation" type="Quaternion" value="-4.37114e-08 0 1 -0" />
+			</attributes>
+			<components>
+				<component _id="230" _typeName="PrefabReference">
+					<attributes>
+						<attribute name="Prefab" type="ResourceRef" value="PrefabResource;Prefabs/RedShip1.prefab" />
+					</attributes>
+				</component>
+			</components>
+		</node>
+		<node _id="43">
+			<attributes>
+				<attribute name="Name" type="String" value="RedShip2" />
+				<attribute name="Position" type="Vector3" value="0 0 12.228168" />
+				<attribute name="Rotation" type="Quaternion" value="-4.37114e-08 0 1 -0" />
+			</attributes>
+			<components>
+				<component _id="276" _typeName="PrefabReference">
+					<attributes>
+						<attribute name="Prefab" type="ResourceRef" value="PrefabResource;Prefabs/RedShip2.prefab" />
+					</attributes>
+				</component>
+			</components>
+		</node>
+		<node _id="45">
+			<attributes>
+				<attribute name="Name" type="String" value="Red_ship_3" />
+				<attribute name="Position" type="Vector3" value="-0.52897 -1.96758e-07 15.488939" />
+			</attributes>
+			<components>
+				<component _id="254" _typeName="PrefabReference">
+					<attributes>
+						<attribute name="Prefab" type="ResourceRef" value="PrefabResource;GameModels/Red_ship_3.glb/Prefab.prefab" />
+					</attributes>
+				</component>
+			</components>
+		</node>
+		<node _id="46">
+			<attributes>
+				<attribute name="Name" type="String" value="Red_ship_4" />
+				<attribute name="Position" type="Vector3" value="-0.562443 -2.44601e-07 13.42629" />
+			</attributes>
+			<components>
+				<component _id="256" _typeName="PrefabReference">
+					<attributes>
+						<attribute name="Prefab" type="ResourceRef" value="PrefabResource;GameModels/Red_ship_4.glb/Prefab.prefab" />
+					</attributes>
+				</component>
+			</components>
+		</node>
+		<node _id="47">
+			<attributes>
+				<attribute name="Name" type="String" value="Red_ship_5" />
+				<attribute name="Position" type="Vector3" value="0.941936 0 14.077031" />
+			</attributes>
+			<components>
+				<component _id="258" _typeName="PrefabReference">
+					<attributes>
+						<attribute name="Prefab" type="ResourceRef" value="PrefabResource;GameModels/Red_ship_5.glb/Prefab.prefab" />
+					</attributes>
+				</component>
+			</components>
+		</node>
+	</nodes>
+	<auxiliary />
+</resource>

@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<resource _id="1">
+	<attributes>
+		<attribute name="Next Node ID" type="Int" value="21" />
+		<attribute name="Next Component ID" type="Int" value="50" />
+	</attributes>
+	<components>
+		<component _id="1" _typeName="Octree" />
+		<component _id="2" _typeName="RenderPipeline">
+			<attributes>
+				<attribute name="Color Space" type="String" value="HDR Linear" />
+				<attribute name="PCF Kernel Size" type="Int" value="5" />
+				<attribute name="Post Process Antialiasing" type="String" value="FXAA3" />
+			</attributes>
+		</component>
+		<component _id="11" _typeName="ReflectionProbeManager" />
+	</components>
+	<nodes>
+		<node _id="2">
+			<attributes>
+				<attribute name="Name" type="String" value="Skybox" />
+			</attributes>
+			<components>
+				<component _id="3" _typeName="Skybox">
+					<attributes>
+						<attribute name="Model" type="ResourceRef" value="Model;Models/Box.mdl" />
+						<attribute name="Material" type="ResourceRefList" value="Material;Materials/DefaultSkybox.xml" />
+					</attributes>
+				</component>
+			</components>
+		</node>
+		<node _id="3">
+			<attributes>
+				<attribute name="Name" type="String" value="Global Zone" />
+			</attributes>
+			<components>
+				<component _id="4" _typeName="Zone">
+					<attributes>
+						<attribute name="Bounding Box Min" type="Vector3" value="-1000 -1000 -1000" />
+						<attribute name="Bounding Box Max" type="Vector3" value="1000 1000 1000" />
+						<attribute name="Ambient Color" type="Color" value="0 0 0 1" />
+						<attribute name="Background Brightness" type="Float" value="0.500000" />
+						<attribute name="Zone Texture" type="ResourceRef" value="TextureCube;Textures/DefaultSkybox.xml" />
+					</attributes>
+				</component>
+			</components>
+		</node>
+		<node _id="4">
+			<attributes>
+				<attribute name="Name" type="String" value="Global Light" />
+				<attribute name="Position" type="Vector3" value="0 0.83592 -1.347171" />
+				<attribute name="Rotation" type="Quaternion" value="0.560247 0.694176 0.24691 -0.378522" />
+			</attributes>
+			<components>
+				<component _id="5" _typeName="Light">
+					<attributes>
+						<attribute name="Light Type" type="String" value="Directional" />
+						<attribute name="Specular Intensity" type="Float" value="1.100000" />
+						<attribute name="Brightness Multiplier" type="Float" value="0.970000" />
+						<attribute name="Indirect Brightness" type="Float" value="1.210000" />
+						<attribute name="Temperature" type="Float" value="6590.310059" />
+						<attribute name="Radius" type="Float" value="0.040000" />
+						<attribute name="Cast Shadows" type="Bool" value="true" />
+					</attributes>
+				</component>
+			</components>
+		</node>
+		<node _id="8">
+			<attributes>
+				<attribute name="Name" type="String" value="EnemySide" />
+				<attribute name="Position" type="Vector3" value="4.62 2.14297e-06 1.02" />
+			</attributes>
+			<nodes>
+				<node _id="13">
+					<attributes>
+						<attribute name="Name" type="String" value="Red_ship_1" />
+						<attribute name="Position" type="Vector3" value="-1.201297 1.421191 -2.832869" />
+						<attribute name="Rotation" type="Quaternion" value="0.886682 -0.056219 0.30589 0.342149" />
+					</attributes>
+					<components>
+						<component _id="19" _typeName="PrefabReference">
+							<attributes>
+								<attribute name="Prefab" type="ResourceRef" value="PrefabResource;GameModels/Red_ship_1.glb/Prefab.prefab" />
+							</attributes>
+						</component>
+					</components>
+				</node>
+				<node _id="14">
+					<attributes>
+						<attribute name="Name" type="String" value="Red_ship_2" />
+						<attribute name="Position" type="Vector3" value="-2.377952 1.052371 -3.548969" />
+						<attribute name="Rotation" type="Quaternion" value="0.891629 0.013527 0.417412 0.174876" />
+					</attributes>
+					<components>
+						<component _id="21" _typeName="PrefabReference">
+							<attributes>
+								<attribute name="Prefab" type="ResourceRef" value="PrefabResource;GameModels/Red_ship_2.glb/Prefab.prefab" />
+							</attributes>
+						</component>
+					</components>
+				</node>
+				<node _id="15">
+					<attributes>
+						<attribute name="Name" type="String" value="Red_ship_3" />
+						<attribute name="Position" type="Vector3" value="-2.121397 0.781916 -0.304818" />
+						<attribute name="Rotation" type="Quaternion" value="0.987109 -0.012739 -0.121202 0.103749" />
+					</attributes>
+					<components>
+						<component _id="23" _typeName="PrefabReference">
+							<attributes>
+								<attribute name="Prefab" type="ResourceRef" value="PrefabResource;GameModels/Red_ship_3.glb/Prefab.prefab" />
+							</attributes>
+						</component>
+					</components>
+				</node>
+				<node _id="16">
+					<attributes>
+						<attribute name="Name" type="String" value="Red_ship_4" />
+						<attribute name="Position" type="Vector3" value="-2.214724 1.240363 1.1159" />
+						<attribute name="Rotation" type="Quaternion" value="0.963499 0.106544 -0.127434 0.209949" />
+					</attributes>
+					<components>
+						<component _id="25" _typeName="PrefabReference">
+							<attributes>
+								<attribute name="Prefab" type="ResourceRef" value="PrefabResource;GameModels/Red_ship_4.glb/Prefab.prefab" />
+							</attributes>
+						</component>
+					</components>
+				</node>
+				<node _id="17">
+					<attributes>
+						<attribute name="Name" type="String" value="Red_ship_5" />
+						<attribute name="Position" type="Vector3" value="-2.03 0.06 1" />
+						<attribute name="Rotation" type="Quaternion" value="0.954661 -0.042829 -0.290198 0.050722" />
+					</attributes>
+					<components>
+						<component _id="27" _typeName="PrefabReference">
+							<attributes>
+								<attribute name="Prefab" type="ResourceRef" value="PrefabResource;GameModels/Red_ship_5.glb/Prefab.prefab" />
+							</attributes>
+						</component>
+					</components>
+				</node>
+			</nodes>
+		</node>
+		<node _id="18">
+			<attributes>
+				<attribute name="Name" type="String" value="PlayerSide" />
+				<attribute name="Position" type="Vector3" value="0.975507 0 2.484909" />
+			</attributes>
+			<nodes>
+				<node _id="11">
+					<attributes>
+						<attribute name="Name" type="String" value="Blue_ship" />
+						<attribute name="Position" type="Vector3" value="-0.969208 -0.193399 -2.843539" />
+						<attribute name="Rotation" type="Quaternion" value="0.882216 -0.087359 -0.41355 0.207461" />
+					</attributes>
+					<components>
+						<component _id="15" _typeName="PrefabReference">
+							<attributes>
+								<attribute name="Prefab" type="ResourceRef" value="PrefabResource;GameModels/Blue_ship.glb/Prefab.prefab" />
+							</attributes>
+						</component>
+					</components>
+				</node>
+			</nodes>
+		</node>
+		<node _id="19">
+			<attributes>
+				<attribute name="Name" type="String" value="Cam" />
+				<attribute name="Position" type="Vector3" value="-1.793994 0 -0.15528" />
+				<attribute name="Rotation" type="Quaternion" value="0.70708 -0.006171 0.70708 0.006171" />
+			</attributes>
+			<components>
+				<component _id="38" _typeName="Camera" />
+			</components>
+		</node>
+		<node _id="20">
+			<attributes>
+				<attribute name="Position" type="Vector3" value="0.595186 0.931862 0.360472" />
+				<attribute name="Rotation" type="Quaternion" value="0.707107 0 0.707107 0" />
+				<attribute name="Scale" type="Vector3" value="0.1 0.1 0.1" />
+			</attributes>
+			<components>
+				<component _id="49" _typeName="Text3D">
+					<attributes>
+						<attribute name="Font" type="ResourceRef" value="Font;Fonts/pixel-ultima-regular.ttf" />
+						<attribute name="Font Size" type="Float" value="200.000000" />
+						<attribute name="Text" type="String" value="Non-Stop Space Shmup" />
+						<attribute name="Face Camera Mode" type="String" value="Direction" />
+						<attribute name="Width" type="Int" value="1362" />
+						<attribute name="Text Effect" type="String" value="Shadow" />
+						<attribute name="Round Stroke" type="Bool" value="true" />
+					</attributes>
+				</component>
+			</components>
+		</node>
+	</nodes>
+	<auxiliary />
+</resource>
